@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | Wellness Club Academy</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .booking-page-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background: var(--clr-bg);
+            position: relative;
+        }
+
+        .booking-container {
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 30px;
+            color: var(--clr-text-muted);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--clr-primary);
+            transform: translateX(-5px);
+        }
+
+        /* Override some styles for standalone page */
+        .registration-grid {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
+
+    <div class="booking-page-wrapper">
+        <div class="booking-container">
+            <a href="index.html" class="back-link">
+                <i class="ph ph-arrow-left"></i> Back to Home
+            </a>
+
+            <div class="registration-grid">
+                <div class="registration-info">
+                    <div class="badge">Registration</div>
+                    <h2>Secure Your Spot at the <span class="text-gradient">Academy</span></h2>
+                    <p>Fill in your details below to register for the 1-day Wellness Club Academy Indore Summit on Saturday, June 13, 2026. Join 1,000+ ambitious individuals in learning how to build health, wealth, and a second income stream.</p>
+                    
+                    <div class="offer-card">
+                        <p class="urgency" style="color: #ef4444; font-weight: 800;">LIMITED TIME OFFER - EARLY BIRD</p>
+                        <div class="price-container" style="margin-bottom: 24px;">
+                            <span class="original-price red-strike">₹4,999</span>
+                            <div class="price-tag" style="font-size: 4rem;">₹1,500</div>
+                        </div>
+                        <div class="facilities-list" style="display: grid; gap: 12px; border-top: 1px solid #eee; padding-top: 20px;">
+                            <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--clr-primary);">
+                                <i class="ph ph-calendar-check" style="font-size: 1.2rem;"></i>
+                                <span>Includes Full 1-Day Summit Access & Guided Workbook</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="registration-form-wrapper" style="background: #ffffff; border: 1px solid var(--clr-border); border-radius: 24px; padding: 40px; box-shadow: var(--shadow-xl); position: relative; z-index: 10;">
+                    <form id="booking-form" class="booking-form" action="#">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Contact Number (WhatsApp)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address / City</label>
+                            <input type="text" id="address" name="address" placeholder="Enter your city or full address" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Current Profession</label>
+                            <div class="choices-grid">
+                                <label class="choice-chip">
+                                    <input type="radio" name="profession" value="working_professional" class="hidden-radio"> Working Professional
+                                </label>
+                                <label class="choice-chip">
+                                    <input type="radio" name="profession" value="student" class="hidden-radio"> Student
+                                </label>
+                                <label class="choice-chip">
+                                    <input type="radio" name="profession" value="homemaker" class="hidden-radio"> Homemaker
+                                </label>
+                                <label class="choice-chip">
+                                    <input type="radio" name="profession" value="business_owner" class="hidden-radio"> Small Business Owner
+                                </label>
+                                <label class="choice-chip">
+                                    <input type="radio" name="profession" value="other" class="hidden-radio"> Other
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>How did you hear about us?</label>
+                            <div class="choices-grid">
+                                <label class="choice-chip">
+                                    <input type="radio" name="source" value="instagram" class="hidden-radio"> Instagram
+                                </label>
+                                <label class="choice-chip">
+                                    <input type="radio" name="source" value="friend" class="hidden-radio"> Friend
+                                </label>
+                                <label class="choice-chip">
+                                    <input type="radio" name="source" value="ads" class="hidden-radio"> Ads
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Your Business Goal</label>
+                            <div class="choices-grid">
+                                <label class="choice-chip">
+                                    <input type="radio" name="goal" value="start" class="hidden-radio"> Start new business
+                                </label>
+                                <label class="choice-chip">
+                                    <input type="radio" name="goal" value="scale" class="hidden-radio"> Scale existing
+                                </label>
+                                <label class="choice-chip">
+                                    <input type="radio" name="goal" value="learn" class="hidden-radio"> Learn industry
+                                </label>
+                                <label class="choice-chip">
+                                    <input type="radio" name="goal" value="network" class="hidden-radio"> Networking
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large glowing-btn" style="width: 100%;">Complete Registration</button>
+                        <p class="form-note">By clicking, you agree to our Terms and Conditions.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple script for chip selection -->
+    <script>
+        // Initialize and handle checked states
+        document.querySelectorAll('.choice-chip input[type="radio"]').forEach(radio => {
+            if (radio.checked) {
+                radio.parentElement.classList.add('selected');
+            }
+            
+            radio.addEventListener('change', function() {
+                const name = this.name;
+                document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
+                    r.parentElement.classList.remove('selected');
+                });
+                if (this.checked) {
+                    this.parentElement.classList.add('selected');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
